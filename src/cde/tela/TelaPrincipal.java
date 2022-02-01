@@ -370,7 +370,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private String returnPath(String format){
         Date currentDate = new Date();
         String fileNameBase = ConvertDateToStringUtil.convertToString(currentDate);
-        String filePathBase = "C:\\Users\\lukas\\Desktop\\"+fileNameBase+"."+format;
+        String dir = System.getProperty("user.home");
+        String filePathBase = dir+"\\Desktop\\"+fileNameBase+"."+format;
         return filePathBase;
     }
   
